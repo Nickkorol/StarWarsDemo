@@ -3,27 +3,87 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		62FD70AF02635CACB2429E65 /* Pods_StarWarsDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FD6A693703905F8E0AB29B0 /* Pods_StarWarsDemo.framework */; };
+		7DA8A1C522E99E6900F42895 /* PersonsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA8A1C422E99E6900F42895 /* PersonsViewModel.swift */; };
+		7DA8A1C722E99E9A00F42895 /* PersonsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA8A1C622E99E9A00F42895 /* PersonsCoordinator.swift */; };
+		7DA8A1C922E9A34F00F42895 /* PersonsCoordinatorImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA8A1C822E9A34F00F42895 /* PersonsCoordinatorImpl.swift */; };
+		7DA8A1CB22E9AA8600F42895 /* PersonsViewModelImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA8A1CA22E9AA8600F42895 /* PersonsViewModelImpl.swift */; };
+		7DA8A1CD22E9B6D600F42895 /* PersonAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA8A1CC22E9B6D600F42895 /* PersonAssembly.swift */; };
+		7DA8A1CF22E9B70300F42895 /* PersonAssemblyImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA8A1CE22E9B70300F42895 /* PersonAssemblyImpl.swift */; };
+		7DA8A1D122E9D13500F42895 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA8A1D022E9D13500F42895 /* AppCoordinator.swift */; };
+		7DA8A1D322E9D15F00F42895 /* AppCoordinatorImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA8A1D222E9D15F00F42895 /* AppCoordinatorImpl.swift */; };
+		7DA8A1D722E9D5B000F42895 /* Persons.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7DA8A1D622E9D5B000F42895 /* Persons.storyboard */; };
+		7DA8A1DF22EAE88200F42895 /* MainContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA8A1DE22EAE88200F42895 /* MainContainer.swift */; };
+		7DA8A1E722EB10D100F42895 /* PersonsViewConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA8A1E622EB10D100F42895 /* PersonsViewConfiguration.swift */; };
+		7DA8A1EB22EB346A00F42895 /* Detail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7DA8A1EA22EB346A00F42895 /* Detail.storyboard */; };
+		7DA8A1ED22EB34D100F42895 /* DetailAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA8A1EC22EB34D100F42895 /* DetailAssembly.swift */; };
+		7DA8A1EF22EB34F800F42895 /* DetailCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA8A1EE22EB34F800F42895 /* DetailCoordinator.swift */; };
+		7DA8A1F122EB350600F42895 /* DetailCoordinatorImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA8A1F022EB350600F42895 /* DetailCoordinatorImpl.swift */; };
+		7DA8A1F322EB355500F42895 /* DetailAssemblyImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA8A1F222EB355500F42895 /* DetailAssemblyImpl.swift */; };
+		7DA8A1F522EB36F700F42895 /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA8A1F422EB36F700F42895 /* DetailViewModel.swift */; };
+		7DA8A1F722EB370400F42895 /* DetailViewModelImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA8A1F622EB370400F42895 /* DetailViewModelImpl.swift */; };
 		7DF0A13E22E6054000CE18C2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DF0A13D22E6054000CE18C2 /* AppDelegate.swift */; };
-		7DF0A14022E6054000CE18C2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DF0A13F22E6054000CE18C2 /* ViewController.swift */; };
 		7DF0A14322E6054000CE18C2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7DF0A14122E6054000CE18C2 /* Main.storyboard */; };
 		7DF0A14622E6054000CE18C2 /* StarWarsDemo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7DF0A14422E6054000CE18C2 /* StarWarsDemo.xcdatamodeld */; };
 		7DF0A14822E6054200CE18C2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7DF0A14722E6054200CE18C2 /* Assets.xcassets */; };
 		7DF0A14B22E6054200CE18C2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7DF0A14922E6054200CE18C2 /* LaunchScreen.storyboard */; };
+		7DF0A15322E6E83600CE18C2 /* PersonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DF0A15222E6E83600CE18C2 /* PersonTableViewCell.swift */; };
+		7DF0A15922E70AD500CE18C2 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DF0A15822E70AD500CE18C2 /* DetailViewController.swift */; };
+		7DF0A15B22E72CAE00CE18C2 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DF0A15A22E72CAE00CE18C2 /* Person.swift */; };
+		7DF0A16322E741FC00CE18C2 /* Planet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DF0A16222E741FC00CE18C2 /* Planet.swift */; };
+		7DF0A16522E7433F00CE18C2 /* Film.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DF0A16422E7433F00CE18C2 /* Film.swift */; };
+		7DF0A16722E743A000CE18C2 /* Starship.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DF0A16622E743A000CE18C2 /* Starship.swift */; };
+		7DF0A16922E743E700CE18C2 /* Vehicle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DF0A16822E743E700CE18C2 /* Vehicle.swift */; };
+		7DF0A16B22E7450100CE18C2 /* Specie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DF0A16A22E7450100CE18C2 /* Specie.swift */; };
+		7DF0A17022E74B0300CE18C2 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DF0A16F22E74B0300CE18C2 /* APIManager.swift */; };
+		7DF0A17222E74E0F00CE18C2 /* People.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DF0A17122E74E0F00CE18C2 /* People.swift */; };
+		7DF0A17422E853D100CE18C2 /* PersonsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DF0A17322E853D100CE18C2 /* PersonsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		02F3BC7FDC2C1FBC4ECB19EB /* Pods-StarWarsDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StarWarsDemo.release.xcconfig"; path = "Target Support Files/Pods-StarWarsDemo/Pods-StarWarsDemo.release.xcconfig"; sourceTree = "<group>"; };
+		0FD6A693703905F8E0AB29B0 /* Pods_StarWarsDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StarWarsDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2A982F9F3276C429E3D355D2 /* Pods-StarWarsDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StarWarsDemo.debug.xcconfig"; path = "Target Support Files/Pods-StarWarsDemo/Pods-StarWarsDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		7DA8A1C422E99E6900F42895 /* PersonsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonsViewModel.swift; sourceTree = "<group>"; };
+		7DA8A1C622E99E9A00F42895 /* PersonsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonsCoordinator.swift; sourceTree = "<group>"; };
+		7DA8A1C822E9A34F00F42895 /* PersonsCoordinatorImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonsCoordinatorImpl.swift; sourceTree = "<group>"; };
+		7DA8A1CA22E9AA8600F42895 /* PersonsViewModelImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonsViewModelImpl.swift; sourceTree = "<group>"; };
+		7DA8A1CC22E9B6D600F42895 /* PersonAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonAssembly.swift; sourceTree = "<group>"; };
+		7DA8A1CE22E9B70300F42895 /* PersonAssemblyImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonAssemblyImpl.swift; sourceTree = "<group>"; };
+		7DA8A1D022E9D13500F42895 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		7DA8A1D222E9D15F00F42895 /* AppCoordinatorImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinatorImpl.swift; sourceTree = "<group>"; };
+		7DA8A1D622E9D5B000F42895 /* Persons.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Persons.storyboard; sourceTree = "<group>"; };
+		7DA8A1DE22EAE88200F42895 /* MainContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainContainer.swift; sourceTree = "<group>"; };
+		7DA8A1E622EB10D100F42895 /* PersonsViewConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonsViewConfiguration.swift; sourceTree = "<group>"; };
+		7DA8A1EA22EB346A00F42895 /* Detail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Detail.storyboard; sourceTree = "<group>"; };
+		7DA8A1EC22EB34D100F42895 /* DetailAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailAssembly.swift; sourceTree = "<group>"; };
+		7DA8A1EE22EB34F800F42895 /* DetailCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCoordinator.swift; sourceTree = "<group>"; };
+		7DA8A1F022EB350600F42895 /* DetailCoordinatorImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCoordinatorImpl.swift; sourceTree = "<group>"; };
+		7DA8A1F222EB355500F42895 /* DetailAssemblyImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailAssemblyImpl.swift; sourceTree = "<group>"; };
+		7DA8A1F422EB36F700F42895 /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
+		7DA8A1F622EB370400F42895 /* DetailViewModelImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModelImpl.swift; sourceTree = "<group>"; };
 		7DF0A13A22E6054000CE18C2 /* StarWarsDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StarWarsDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7DF0A13D22E6054000CE18C2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		7DF0A13F22E6054000CE18C2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		7DF0A14222E6054000CE18C2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7DF0A14522E6054000CE18C2 /* StarWarsDemo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = StarWarsDemo.xcdatamodel; sourceTree = "<group>"; };
 		7DF0A14722E6054200CE18C2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7DF0A14A22E6054200CE18C2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7DF0A14C22E6054200CE18C2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7DF0A15222E6E83600CE18C2 /* PersonTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonTableViewCell.swift; sourceTree = "<group>"; };
+		7DF0A15822E70AD500CE18C2 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		7DF0A15A22E72CAE00CE18C2 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		7DF0A16222E741FC00CE18C2 /* Planet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Planet.swift; path = ../View/Planet.swift; sourceTree = "<group>"; };
+		7DF0A16422E7433F00CE18C2 /* Film.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Film.swift; sourceTree = "<group>"; };
+		7DF0A16622E743A000CE18C2 /* Starship.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Starship.swift; path = ../View/Starship.swift; sourceTree = "<group>"; };
+		7DF0A16822E743E700CE18C2 /* Vehicle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Vehicle.swift; path = ../View/Vehicle.swift; sourceTree = "<group>"; };
+		7DF0A16A22E7450100CE18C2 /* Specie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Specie.swift; path = ../View/Specie.swift; sourceTree = "<group>"; };
+		7DF0A16F22E74B0300CE18C2 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		7DF0A17122E74E0F00CE18C2 /* People.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = People.swift; sourceTree = "<group>"; };
+		7DF0A17322E853D100CE18C2 /* PersonsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +91,126 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				62FD70AF02635CACB2429E65 /* Pods_StarWarsDemo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7DA8A1E022EAEF1600F42895 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				7DF0A14122E6054000CE18C2 /* Main.storyboard */,
+				7DA8A1DE22EAE88200F42895 /* MainContainer.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		7DA8A1E222EB078A00F42895 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				7DF0A13D22E6054000CE18C2 /* AppDelegate.swift */,
+				7DA8A1D022E9D13500F42895 /* AppCoordinator.swift */,
+				7DA8A1D222E9D15F00F42895 /* AppCoordinatorImpl.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		7DA8A1E322EB07A000F42895 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				7DA8A1E622EB10D100F42895 /* PersonsViewConfiguration.swift */,
+				7DF0A15222E6E83600CE18C2 /* PersonTableViewCell.swift */,
+				7DF0A17322E853D100CE18C2 /* PersonsViewController.swift */,
+				7DA8A1D622E9D5B000F42895 /* Persons.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		7DA8A1E422EB07B800F42895 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				7DA8A1F822EB4CAF00F42895 /* Assembly */,
+				7DA8A1F922EB4CBD00F42895 /* View */,
+				7DA8A1FA22EB4CC400F42895 /* ViewModel */,
+				7DA8A1FB22EB4CCC00F42895 /* Coordinator */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
+		7DA8A1E522EB07C200F42895 /* Assembly */ = {
+			isa = PBXGroup;
+			children = (
+				7DA8A1CC22E9B6D600F42895 /* PersonAssembly.swift */,
+				7DA8A1CE22E9B70300F42895 /* PersonAssemblyImpl.swift */,
+			);
+			path = Assembly;
+			sourceTree = "<group>";
+		};
+		7DA8A1E822EB163300F42895 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				7DA8A1E922EB164E00F42895 /* Persons */,
+				7DA8A1E422EB07B800F42895 /* Detail */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		7DA8A1E922EB164E00F42895 /* Persons */ = {
+			isa = PBXGroup;
+			children = (
+				7DA8A1E522EB07C200F42895 /* Assembly */,
+				7DF0A16022E7408200CE18C2 /* ViewModel */,
+				7DA8A1E322EB07A000F42895 /* View */,
+				7DF0A16122E7408B00CE18C2 /* Coordinator */,
+			);
+			path = Persons;
+			sourceTree = "<group>";
+		};
+		7DA8A1F822EB4CAF00F42895 /* Assembly */ = {
+			isa = PBXGroup;
+			children = (
+				7DA8A1EC22EB34D100F42895 /* DetailAssembly.swift */,
+				7DA8A1F222EB355500F42895 /* DetailAssemblyImpl.swift */,
+			);
+			path = Assembly;
+			sourceTree = "<group>";
+		};
+		7DA8A1F922EB4CBD00F42895 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				7DF0A15822E70AD500CE18C2 /* DetailViewController.swift */,
+				7DA8A1EA22EB346A00F42895 /* Detail.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		7DA8A1FA22EB4CC400F42895 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				7DA8A1F422EB36F700F42895 /* DetailViewModel.swift */,
+				7DA8A1F622EB370400F42895 /* DetailViewModelImpl.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		7DA8A1FB22EB4CCC00F42895 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				7DA8A1EE22EB34F800F42895 /* DetailCoordinator.swift */,
+				7DA8A1F022EB350600F42895 /* DetailCoordinatorImpl.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
 		7DF0A13122E6054000CE18C2 = {
 			isa = PBXGroup;
 			children = (
 				7DF0A13C22E6054000CE18C2 /* StarWarsDemo */,
 				7DF0A13B22E6054000CE18C2 /* Products */,
+				9D4FF6907409E1D8821EDA97 /* Pods */,
+				DD2647964975D3D1FBC2388C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +225,74 @@
 		7DF0A13C22E6054000CE18C2 /* StarWarsDemo */ = {
 			isa = PBXGroup;
 			children = (
-				7DF0A13D22E6054000CE18C2 /* AppDelegate.swift */,
-				7DF0A13F22E6054000CE18C2 /* ViewController.swift */,
-				7DF0A14122E6054000CE18C2 /* Main.storyboard */,
+				7DA8A1E222EB078A00F42895 /* Application */,
+				7DA8A1E022EAEF1600F42895 /* Main */,
+				7DF0A16E22E746E000CE18C2 /* Network */,
+				7DF0A15E22E7407300CE18C2 /* Models */,
+				7DA8A1E822EB163300F42895 /* Modules */,
 				7DF0A14722E6054200CE18C2 /* Assets.xcassets */,
 				7DF0A14922E6054200CE18C2 /* LaunchScreen.storyboard */,
 				7DF0A14C22E6054200CE18C2 /* Info.plist */,
 				7DF0A14422E6054000CE18C2 /* StarWarsDemo.xcdatamodeld */,
 			);
 			path = StarWarsDemo;
+			sourceTree = "<group>";
+		};
+		7DF0A15E22E7407300CE18C2 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				7DF0A15A22E72CAE00CE18C2 /* Person.swift */,
+				7DF0A16222E741FC00CE18C2 /* Planet.swift */,
+				7DF0A16422E7433F00CE18C2 /* Film.swift */,
+				7DF0A16622E743A000CE18C2 /* Starship.swift */,
+				7DF0A16822E743E700CE18C2 /* Vehicle.swift */,
+				7DF0A16A22E7450100CE18C2 /* Specie.swift */,
+				7DF0A17122E74E0F00CE18C2 /* People.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		7DF0A16022E7408200CE18C2 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				7DA8A1C422E99E6900F42895 /* PersonsViewModel.swift */,
+				7DA8A1CA22E9AA8600F42895 /* PersonsViewModelImpl.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		7DF0A16122E7408B00CE18C2 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				7DA8A1C622E99E9A00F42895 /* PersonsCoordinator.swift */,
+				7DA8A1C822E9A34F00F42895 /* PersonsCoordinatorImpl.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		7DF0A16E22E746E000CE18C2 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				7DF0A16F22E74B0300CE18C2 /* APIManager.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		9D4FF6907409E1D8821EDA97 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2A982F9F3276C429E3D355D2 /* Pods-StarWarsDemo.debug.xcconfig */,
+				02F3BC7FDC2C1FBC4ECB19EB /* Pods-StarWarsDemo.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		DD2647964975D3D1FBC2388C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0FD6A693703905F8E0AB29B0 /* Pods_StarWarsDemo.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +302,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7DF0A14F22E6054200CE18C2 /* Build configuration list for PBXNativeTarget "StarWarsDemo" */;
 			buildPhases = (
+				3800231BEFDC0394420AFAA7 /* [CP] Check Pods Manifest.lock */,
 				7DF0A13622E6054000CE18C2 /* Sources */,
 				7DF0A13722E6054000CE18C2 /* Frameworks */,
 				7DF0A13822E6054000CE18C2 /* Resources */,
+				95DD860D6BB02EAE27329CEA /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -128,19 +358,89 @@
 				7DF0A14B22E6054200CE18C2 /* LaunchScreen.storyboard in Resources */,
 				7DF0A14822E6054200CE18C2 /* Assets.xcassets in Resources */,
 				7DF0A14322E6054000CE18C2 /* Main.storyboard in Resources */,
+				7DA8A1EB22EB346A00F42895 /* Detail.storyboard in Resources */,
+				7DA8A1D722E9D5B000F42895 /* Persons.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3800231BEFDC0394420AFAA7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-StarWarsDemo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		95DD860D6BB02EAE27329CEA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-StarWarsDemo/Pods-StarWarsDemo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-StarWarsDemo/Pods-StarWarsDemo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-StarWarsDemo/Pods-StarWarsDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		7DF0A13622E6054000CE18C2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7DF0A14022E6054000CE18C2 /* ViewController.swift in Sources */,
+				7DA8A1C722E99E9A00F42895 /* PersonsCoordinator.swift in Sources */,
+				7DA8A1CB22E9AA8600F42895 /* PersonsViewModelImpl.swift in Sources */,
+				7DF0A16722E743A000CE18C2 /* Starship.swift in Sources */,
+				7DA8A1C522E99E6900F42895 /* PersonsViewModel.swift in Sources */,
+				7DA8A1DF22EAE88200F42895 /* MainContainer.swift in Sources */,
+				7DF0A17422E853D100CE18C2 /* PersonsViewController.swift in Sources */,
+				7DA8A1D322E9D15F00F42895 /* AppCoordinatorImpl.swift in Sources */,
+				7DA8A1F722EB370400F42895 /* DetailViewModelImpl.swift in Sources */,
 				7DF0A14622E6054000CE18C2 /* StarWarsDemo.xcdatamodeld in Sources */,
+				7DA8A1F322EB355500F42895 /* DetailAssemblyImpl.swift in Sources */,
+				7DA8A1EF22EB34F800F42895 /* DetailCoordinator.swift in Sources */,
+				7DA8A1CF22E9B70300F42895 /* PersonAssemblyImpl.swift in Sources */,
+				7DF0A16B22E7450100CE18C2 /* Specie.swift in Sources */,
+				7DA8A1F122EB350600F42895 /* DetailCoordinatorImpl.swift in Sources */,
+				7DA8A1ED22EB34D100F42895 /* DetailAssembly.swift in Sources */,
+				7DF0A16322E741FC00CE18C2 /* Planet.swift in Sources */,
+				7DA8A1E722EB10D100F42895 /* PersonsViewConfiguration.swift in Sources */,
+				7DF0A17222E74E0F00CE18C2 /* People.swift in Sources */,
+				7DF0A15322E6E83600CE18C2 /* PersonTableViewCell.swift in Sources */,
+				7DF0A15B22E72CAE00CE18C2 /* Person.swift in Sources */,
+				7DA8A1D122E9D13500F42895 /* AppCoordinator.swift in Sources */,
 				7DF0A13E22E6054000CE18C2 /* AppDelegate.swift in Sources */,
+				7DA8A1CD22E9B6D600F42895 /* PersonAssembly.swift in Sources */,
+				7DF0A16922E743E700CE18C2 /* Vehicle.swift in Sources */,
+				7DA8A1F522EB36F700F42895 /* DetailViewModel.swift in Sources */,
+				7DF0A17022E74B0300CE18C2 /* APIManager.swift in Sources */,
+				7DF0A16522E7433F00CE18C2 /* Film.swift in Sources */,
+				7DF0A15922E70AD500CE18C2 /* DetailViewController.swift in Sources */,
+				7DA8A1C922E9A34F00F42895 /* PersonsCoordinatorImpl.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,6 +584,7 @@
 		};
 		7DF0A15022E6054200CE18C2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2A982F9F3276C429E3D355D2 /* Pods-StarWarsDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -302,6 +603,7 @@
 		};
 		7DF0A15122E6054200CE18C2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 02F3BC7FDC2C1FBC4ECB19EB /* Pods-StarWarsDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
