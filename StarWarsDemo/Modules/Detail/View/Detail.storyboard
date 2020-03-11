@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_1" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -18,24 +16,30 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="jtn-6B-x6P">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KLY-7U-3VD">
+                                <rect key="frame" x="0.0" y="453" width="414" height="443"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="r3B-YN-gAT">
+                                <rect key="frame" x="188.5" y="434.5" width="37" height="37"/>
+                            </activityIndicatorView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="WXW-5a-qI9" firstAttribute="bottom" secondItem="jtn-6B-x6P" secondAttribute="bottom" id="2OS-dG-xj6"/>
-                            <constraint firstItem="jtn-6B-x6P" firstAttribute="top" secondItem="WXW-5a-qI9" secondAttribute="top" id="erB-Rf-r7H"/>
-                            <constraint firstItem="WXW-5a-qI9" firstAttribute="trailing" secondItem="jtn-6B-x6P" secondAttribute="trailing" id="haY-ej-C2d"/>
-                            <constraint firstItem="jtn-6B-x6P" firstAttribute="leading" secondItem="WXW-5a-qI9" secondAttribute="leading" id="qPQ-r8-HhM"/>
+                            <constraint firstItem="r3B-YN-gAT" firstAttribute="centerY" secondItem="WXW-5a-qI9" secondAttribute="centerY" id="5y5-Gm-Q9E"/>
+                            <constraint firstItem="KLY-7U-3VD" firstAttribute="leading" secondItem="WXW-5a-qI9" secondAttribute="leading" id="DZ7-m6-ghD"/>
+                            <constraint firstItem="KLY-7U-3VD" firstAttribute="top" secondItem="WXW-5a-qI9" secondAttribute="centerY" id="GJR-wP-ruG"/>
+                            <constraint firstItem="r3B-YN-gAT" firstAttribute="centerX" secondItem="WXW-5a-qI9" secondAttribute="centerX" id="drS-FK-2u4"/>
+                            <constraint firstItem="KLY-7U-3VD" firstAttribute="bottom" secondItem="mCh-a8-dPJ" secondAttribute="bottom" id="dtq-Ys-9yb"/>
+                            <constraint firstItem="WXW-5a-qI9" firstAttribute="trailing" secondItem="KLY-7U-3VD" secondAttribute="trailing" id="tX3-gY-Mxb"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="WXW-5a-qI9"/>
                     </view>
                     <navigationItem key="navigationItem" title="Person" largeTitleDisplayMode="always" id="Z3u-9J-fuT"/>
+                    <connections>
+                        <outlet property="activityIndicator" destination="r3B-YN-gAT" id="MO7-Fz-7sf"/>
+                        <outlet property="titreView" destination="KLY-7U-3VD" id="0q7-VJ-4qy"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3PZ-hQ-pM5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

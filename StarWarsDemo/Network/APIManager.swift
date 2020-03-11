@@ -30,8 +30,16 @@ enum LinkType: finalURLPoint {
         switch self {
         case .Person(let page):
             return "/api/people/?page=\(page)"
-        default:
-            return "\(baseURL)"
+        case .Planet(let url):
+            return "\(url)"
+        case .Film(let url):
+            return "\(url)"
+        case .Species(let url):
+            return "\(url)"
+        case .Vehicle(let url):
+            return "\(url)"
+        case .Starship(let url):
+            return "\(url)"
         }
     }
     
@@ -53,7 +61,7 @@ class APIManager {
     }
     
     var request: DataRequest {
-        return Alamofire.request(url!)
+        return Alamofire.request(url!, method: .post, parameters: nil, encoding: JSONEncoding.default)
     }
     var next: String?
     
@@ -80,6 +88,52 @@ class APIManager {
                 print(error)
             }
             completion(persons, self.next)
+        }
+    }
+    
+    func sendRequestForFilms(filmsURLs: [URL], speciesURLs: [URL], completion: @escaping([Film],[Specie])->()) {
+        DispatchQueue.global(qos: .userInitiated).async {
+            var films = [Film]()
+            var species = [Specie]()
+            let downloadGroup = DispatchGroup()
+            for url in filmsURLs {
+                downloadGroup.enter()
+                let request = LinkType.Film(url: url).request
+                request.responseJSON { (response) in
+                    guard response.result.isSuccess else {
+                        print("Error in response \(String(describing: response.result.error))")
+                        return
+                    }
+                    do {
+                        let result = try JSONDecoder().decode(Film.self, from: response.data!)
+                        films.append(result)
+                        downloadGroup.leave()
+                    }
+                    catch {
+                        print(error)
+                    }
+                }
+            }
+            for url in speciesURLs {
+                downloadGroup.enter()
+                let request = LinkType.Species(url: url).request
+                request.responseJSON { (response) in
+                    guard response.result.isSuccess else {
+                        print("Error in response \(String(describing: response.result.error))")
+                        return
+                    }
+                    do {
+                        let result = try JSONDecoder().decode(Specie.self, from: response.data!)
+                        species.append(result)
+                        downloadGroup.leave()
+                    }
+                    catch {
+                        print(error)
+                    }
+                }
+            }
+            downloadGroup.wait()
+            completion(films,species)
         }
     }
 }

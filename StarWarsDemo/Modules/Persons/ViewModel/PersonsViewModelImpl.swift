@@ -14,7 +14,8 @@ final class PersonsViewModelImpl: PersonsViewModel {
     internal var hasFinishedDownloading = false
     private var isLoading = false
     
-    weak var controller: PersonsViewController?
+    //weak var controller: PersonsViewController?
+    weak var view: PersonsViewInput?
     
     func viewDidLoad() {
         requestPersons(needsRefreshing: false, isCalledOnScroll: false)
@@ -25,15 +26,15 @@ final class PersonsViewModelImpl: PersonsViewModel {
     }
     
     func requestPersons(needsRefreshing: Bool, isCalledOnScroll: Bool) {
-        guard !isLoading else {return}
+        guard !isLoading else { return }
         isLoading = true
         if needsRefreshing {
             hasFinishedDownloading = false
             numberOfPage = 0
         }
         numberOfPage += 1
-        APIManager.shared.sendRequest(numberOfPage: numberOfPage) {[weak self] (persons, next) in
-            self?.controller?.reloadData(persons: persons,
+        URLSessionAPIManager.shared.getPersonsList(numberOfPage: numberOfPage) {[weak self] (persons, next) in
+            self?.view?.reloadData(persons: persons,
                                          next: next,
                                          needsRefreshing: needsRefreshing,
                                          isCalledOnScroll: isCalledOnScroll)

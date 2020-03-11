@@ -30,7 +30,7 @@ final class DetailAssemblyImpl: DetailAssembly {
         let coordinator = DetailCoordinatorImpl(root: root, mainViewController: controller)
         
         viewModel.coordinator = coordinator
-        viewModel.controller = controller
+        viewModel.view = controller
         viewModel.person = person
         
         return coordinator

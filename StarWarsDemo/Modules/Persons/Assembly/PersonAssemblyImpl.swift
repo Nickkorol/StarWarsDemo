@@ -30,7 +30,7 @@ final class PersonAssemblyImpl: PersonAssembly {
         let coordinator = PersonsCoordinatorImpl(root: root, mainViewController: controller)
         
         viewModel.coordinator = coordinator
-        viewModel.controller = controller
+        viewModel.view = controller
         
         return coordinator
     }

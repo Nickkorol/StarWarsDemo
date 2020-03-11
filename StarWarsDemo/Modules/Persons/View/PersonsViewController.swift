@@ -43,32 +43,11 @@ class PersonsViewController: UIViewController {
         super.viewDidAppear(animated)
         viewModel.viewDidLoad()
     }
-    
-    // MARK: - Navigation
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        //if segue.identifier == "showDetail" {
-            if let indexPath = tableView.indexPathForSelectedRow {
-                let detailVC = segue.destination as! DetailViewController
-                detailVC.person = isFiltering ? filteredPersons[indexPath.row] : persons[indexPath.row]
-            }
-        //}
-    }
 }
 
-extension PersonsViewController: PersonsViewConfiguration {
+extension PersonsViewController: PersonsViewInput {
     
-    internal func configure() {
-        activityIndicator.color = UIColor.gray
-        activityIndicator.startAnimating()
-        
-        tableView.isHidden = true
-        
-        tableView.addSubview(myRefreshControl)
-        setupSearchController()
-    }
-    
-    internal func reloadData(persons: [Person], next: String?, needsRefreshing: Bool, isCalledOnScroll: Bool) {
+    func reloadData(persons: [Person], next: String?, needsRefreshing: Bool, isCalledOnScroll: Bool) {
         self.persons += persons
         tableView.reloadData()
         if !isCalledOnScroll && needsRefreshing {
@@ -78,13 +57,29 @@ extension PersonsViewController: PersonsViewConfiguration {
         tableView.isHidden = false
     }
     
-    @objc internal func refresh(sender: UIRefreshControl) {
+    func configure() {
+        activityIndicator.color = UIColor.gray
+        activityIndicator.startAnimating()
+        
+        tableView.isHidden = true
+        
+        tableView.addSubview(myRefreshControl)
+        setupSearchController()
+    }
+    
+}
+
+private extension PersonsViewController {
+    func isLoadingCell(for indexPath: IndexPath) -> Bool {
+        return indexPath.section == (persons.count - 1)
+    }
+    
+    @objc func refresh(sender: UIRefreshControl) {
         self.persons.removeAll()
         self.filteredPersons.removeAll()
         self.tableView.reloadData()
         viewModel.requestPersons(needsRefreshing: true, isCalledOnScroll: false)
     }
-    
 }
 
 extension PersonsViewController: UITableViewDataSourcePrefetching, UITableViewDelegate, UITableViewDataSource {

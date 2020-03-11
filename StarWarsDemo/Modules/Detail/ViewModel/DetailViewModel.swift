@@ -10,6 +10,7 @@ import Foundation
 
 protocol DetailViewModel {
     func viewDidLoad()
+    //func showPersonInfo() -> String
     
     var person: Person! { get }
 }
