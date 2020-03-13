@@ -112,6 +112,7 @@ class URLSessionAPIManager {
             self.dataTask = self.defaultSession.dataTask(with: planetURL) { [weak self] data, response, error in
                 defer {
                     self?.dataTask = nil
+                    downloadGroup.leave()
                 }
                 if let error = error {
                     self?.errorMessage += "Datatask error: " + error.localizedDescription + "\n"
@@ -122,7 +123,6 @@ class URLSessionAPIManager {
                     do {
                         let result = try JSONDecoder().decode(Planet.self, from: data)
                         planet = result
-                        downloadGroup.leave()
                     }
                     catch {
                         print(error)
@@ -136,6 +136,7 @@ class URLSessionAPIManager {
                 self.dataTask = self.defaultSession.dataTask(with: url) { [weak self] data, response, error in
                     defer {
                         self?.dataTask = nil
+                        downloadGroup.leave()
                     }
                     if let error = error {
                         self?.errorMessage += "Datatask error: " + error.localizedDescription + "\n"
@@ -146,7 +147,6 @@ class URLSessionAPIManager {
                         do {
                             let result = try JSONDecoder().decode(Film.self, from: data)
                             films.append(result)
-                            downloadGroup.leave()
                         }
                         catch {
                             print(error)
@@ -162,6 +162,7 @@ class URLSessionAPIManager {
                 self.dataTask = self.defaultSession.dataTask(with: url) { [weak self] data, response, error in
                     defer {
                         self?.dataTask = nil
+                        downloadGroup.leave()
                     }
                     if let error = error {
                         self?.errorMessage += "Datatask error: " + error.localizedDescription + "\n"
@@ -172,7 +173,6 @@ class URLSessionAPIManager {
                         do {
                             let result = try JSONDecoder().decode(Vehicle.self, from: data)
                             vehicles.append(result)
-                            downloadGroup.leave()
                         }
                         catch {
                             print(error)
@@ -188,6 +188,7 @@ class URLSessionAPIManager {
                 self.dataTask = self.defaultSession.dataTask(with: url) { [weak self] data, response, error in
                     defer {
                         self?.dataTask = nil
+                        downloadGroup.leave()
                     }
                     if let error = error {
                         self?.errorMessage += "Datatask error: " + error.localizedDescription + "\n"
@@ -198,7 +199,6 @@ class URLSessionAPIManager {
                         do {
                             let result = try JSONDecoder().decode(Starship.self, from: data)
                             starships.append(result)
-                            downloadGroup.leave()
                         }
                         catch {
                             print(error)
