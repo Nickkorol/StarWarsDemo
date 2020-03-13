@@ -8,7 +8,6 @@
 
 import Foundation
 
-// MARK: - Planet
 struct Starship: Codable {
     let name, model, manufacturer, costInCredits: String
     let length, maxAtmospheringSpeed, crew, passengers: String

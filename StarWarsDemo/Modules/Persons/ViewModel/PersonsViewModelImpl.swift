@@ -14,7 +14,6 @@ final class PersonsViewModelImpl: PersonsViewModel {
     internal var hasFinishedDownloading = false
     private var isLoading = false
     
-    //weak var controller: PersonsViewController?
     weak var view: PersonsViewInput?
     
     func viewDidLoad() {
@@ -39,6 +38,7 @@ final class PersonsViewModelImpl: PersonsViewModel {
                                          needsRefreshing: needsRefreshing,
                                          isCalledOnScroll: isCalledOnScroll)
             if next == nil && isCalledOnScroll {
+                self?.view?.hideInfiniteLoading()
                 self?.hasFinishedDownloading = true
             }
             self?.isLoading = false

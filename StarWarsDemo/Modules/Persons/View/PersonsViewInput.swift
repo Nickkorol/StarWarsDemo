@@ -11,4 +11,5 @@ import Foundation
 protocol PersonsViewInput: class {
     func configure()
     func reloadData(persons: [Person], next: String?, needsRefreshing: Bool, isCalledOnScroll: Bool)
+    func hideInfiniteLoading()
 }

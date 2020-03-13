@@ -60,11 +60,15 @@ extension PersonsViewController: PersonsViewInput {
     func configure() {
         activityIndicator.color = UIColor.gray
         activityIndicator.startAnimating()
-        
+        self.navigationItem.title = "Star Wars"
         tableView.isHidden = true
         
         tableView.addSubview(myRefreshControl)
         setupSearchController()
+    }
+    
+    func hideInfiniteLoading() {
+        self.tableView.tableFooterView = nil
     }
     
 }
@@ -86,6 +90,12 @@ extension PersonsViewController: UITableViewDataSourcePrefetching, UITableViewDe
     func tableView(_ tableView: UITableView, prefetchRowsAt indexPaths: [IndexPath]) {
         let needsFetch = indexPaths.contains { $0.row >= self.persons.count-10 } && !viewModel.hasFinishedDownloading
         if needsFetch {
+            let spinner = UIActivityIndicatorView(style: .gray)
+            spinner.startAnimating()
+            spinner.frame = CGRect(x: 0, y: 0, width: tableView.bounds.width, height: 44)
+            
+            self.tableView.tableFooterView = spinner
+            self.tableView.tableFooterView?.isHidden = false
             viewModel.requestPersons(needsRefreshing: false, isCalledOnScroll: true)
         }
     }
@@ -97,7 +107,7 @@ extension PersonsViewController: UITableViewDataSourcePrefetching, UITableViewDe
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "personCell", for: indexPath) as! PersonTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "personCell", for: indexPath)
         let person = isFiltering ? filteredPersons[indexPath.row] : persons[indexPath.row]
         cell.textLabel?.text = person.name
         cell.detailTextLabel?.text = person.gender.map { $0.rawValue }

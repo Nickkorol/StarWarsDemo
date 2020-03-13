@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KLY-7U-3VD">
-                                <rect key="frame" x="0.0" y="453" width="414" height="443"/>
+                                <rect key="frame" x="0.0" y="448" width="414" height="448"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                             <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="r3B-YN-gAT">
@@ -26,12 +26,12 @@
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="KLY-7U-3VD" firstAttribute="bottom" secondItem="mCh-a8-dPJ" secondAttribute="bottom" id="5Hu-0W-0kV"/>
                             <constraint firstItem="r3B-YN-gAT" firstAttribute="centerY" secondItem="WXW-5a-qI9" secondAttribute="centerY" id="5y5-Gm-Q9E"/>
-                            <constraint firstItem="KLY-7U-3VD" firstAttribute="leading" secondItem="WXW-5a-qI9" secondAttribute="leading" id="DZ7-m6-ghD"/>
-                            <constraint firstItem="KLY-7U-3VD" firstAttribute="top" secondItem="WXW-5a-qI9" secondAttribute="centerY" id="GJR-wP-ruG"/>
+                            <constraint firstItem="KLY-7U-3VD" firstAttribute="top" secondItem="mCh-a8-dPJ" secondAttribute="centerY" id="HhK-EC-l7Z"/>
+                            <constraint firstItem="KLY-7U-3VD" firstAttribute="leading" secondItem="WXW-5a-qI9" secondAttribute="leading" id="Ydg-nt-WKg"/>
                             <constraint firstItem="r3B-YN-gAT" firstAttribute="centerX" secondItem="WXW-5a-qI9" secondAttribute="centerX" id="drS-FK-2u4"/>
-                            <constraint firstItem="KLY-7U-3VD" firstAttribute="bottom" secondItem="mCh-a8-dPJ" secondAttribute="bottom" id="dtq-Ys-9yb"/>
-                            <constraint firstItem="WXW-5a-qI9" firstAttribute="trailing" secondItem="KLY-7U-3VD" secondAttribute="trailing" id="tX3-gY-Mxb"/>
+                            <constraint firstItem="WXW-5a-qI9" firstAttribute="trailing" secondItem="KLY-7U-3VD" secondAttribute="trailing" id="nFi-o4-KSn"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="WXW-5a-qI9"/>
                     </view>

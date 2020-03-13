@@ -25,8 +25,18 @@ final class DetailViewModelImpl: DetailViewModel {
             let planet = person.homeworld,
             let vehicles = person.vehicles,
             let starships = person.starships else { return }
-        URLSessionAPIManager.shared.getDetailPersonInfo(filmsURLs: films, speciesURLs: species, planetURL: planet, vehiclesURLs: vehicles, starshipsURLs: starships) {[weak self] (films, species, planet, vehicles, starships) in
-            self?.prepareDetailText(films: films, species: species, planet: planet, vehicles: vehicles, starships: starships)
+        if let data = UserDefaults.standard.object(forKey: person.name) as? Data {
+            do {
+                let textData = try NSKeyedUnarchiver.unarchiveTopLevelObjectWithData(data)
+                guard let text = textData as? String else { return }
+                self.view?.showDetailUserInfo(text: text)
+            } catch let error as NSError {
+                print(error.localizedDescription)
+            }
+        } else {
+            URLSessionAPIManager.shared.getDetailPersonInfo(filmsURLs: films, speciesURLs: species, planetURL: planet, vehiclesURLs: vehicles, starshipsURLs: starships) {[weak self] (films, species, planet, vehicles, starships) in
+                self?.prepareDetailText(films: films, species: species, planet: planet, vehicles: vehicles, starships: starships)
+            }
         }
     }
     
@@ -78,29 +88,15 @@ final class DetailViewModelImpl: DetailViewModel {
             finalText.removeLast()
             finalText.removeLast()
         }
+        
+        do {
+            let data = try NSKeyedArchiver.archivedData(withRootObject: finalText, requiringSecureCoding: false)
+            UserDefaults.standard.set(data, forKey: person.name)
+        } catch let error as NSError {
+            print(error.localizedDescription)
+        }
+        
         self.view?.showDetailUserInfo(text: finalText)
-        //self.textLabel.text = finalText
-        //self.textLabel.isHidden = false
-        //self.activityIndicator.stopAnimating()
     }
-    
-//    func showPersonInfo() -> String {
-//        self.loadPersonData()
-//        var personText = "Name - \(person.name)\n"
-//        guard let gender = person.gender else { return personText }
-//        personText += "Gender - \(gender)\n"
-//        personText += "Mass - \(person.mass) kg\n"
-//        personText += "Height - \(person.height) cm\n"
-//        personText += "Hair color - \(person.hairColor)\n"
-//        personText += "Eye color - \(person.eyeColor)\n"
-//        personText += "Skin color - \(person.skinColor)\n"
-//        personText += "Birth year - \(person.birthYear)\n"
-////        personText += "Films - "
-////        for film in films {
-////            personText += "\(film.title)"
-////        }
-//        personText += "\n"
-//        return personText
-//    }
     
 }

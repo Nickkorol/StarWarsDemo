@@ -10,7 +10,6 @@ import UIKit
 
 class DetailViewController: UIViewController {
     
-    //@IBOutlet private var textLabel: TriangleLabel!
     @IBOutlet private var activityIndicator: UIActivityIndicatorView!
     @IBOutlet private var titreView: UIView!
     
@@ -34,7 +33,7 @@ class DetailViewController: UIViewController {
 extension DetailViewController: DetailViewInput {
     func showDetailUserInfo(text: String) {
         self.activityIndicator.stopAnimating()
-        //self.textLabel.text = text
+        titreView.clipsToBounds = true
         
         let label = UILabel(frame: CGRect(x: 0, y: 0, width: titreView.frame.size.width, height: titreView.frame.size.height))
         label.text = text
@@ -43,66 +42,40 @@ extension DetailViewController: DetailViewInput {
         label.backgroundColor = .clear
         label.font = UIFont(name: "Star Jedi Rounded", size: 14)
         label.textColor = .yellow
-        label.layer.transform = CATransform3DRotate(label.layer.transform, .pi/4, 1, 0, 0)
+        label.clipsToBounds = true
         
         titreView.addSubview(label)
         
-        //animation()
-        
+        configureAnimation(label: label)
+    }
+}
+
+extension DetailViewController {
+    func configureAnimation(label: UILabel) {
+        label.layer.transform = CATransform3DRotate(label.layer.transform, .pi/4, 1, 0, 0)
         var animations = [CABasicAnimation]()
         
-        let animation1 = CABasicAnimation(keyPath: #keyPath(CALayer.position))
-        animation1.fromValue = CGPoint(x: titreView.bounds.width/2, y: titreView.bounds.height)
-        animation1.toValue = CGPoint(x: titreView.bounds.width/2, y: -titreView.bounds.height)
-        animation1.duration = 15.0
-        animation1.autoreverses = false
+        let positionAnimation = CABasicAnimation(keyPath: #keyPath(CALayer.position))
+        positionAnimation.fromValue = CGPoint(x: titreView.bounds.width/2, y: titreView.bounds.height*1.5)
+        positionAnimation.toValue = CGPoint(x: titreView.bounds.width/2, y: -titreView.bounds.height/2)
+        positionAnimation.duration = 15.0
+        positionAnimation.autoreverses = false
         
-        animations.append(animation1)
+        animations.append(positionAnimation)
         
-        let animation2 = CABasicAnimation(keyPath: #keyPath(CALayer.opacity))
-        animation2.fromValue = 1.0
-        animation2.toValue = 0.0
-        animation2.beginTime = 10.0
-        animation2.duration = 5.0
-        animation2.autoreverses = false
+        let opacityAnimation = CABasicAnimation(keyPath: #keyPath(CALayer.opacity))
+        opacityAnimation.fromValue = 1.0
+        opacityAnimation.toValue = 0.0
+        opacityAnimation.beginTime = 7.0
+        opacityAnimation.duration = 8.0
+        opacityAnimation.autoreverses = false
         
-        animations.append(animation2)
+        animations.append(opacityAnimation)
         
         let group = CAAnimationGroup()
         
         group.duration = 15.0
         group.animations = animations
         label.layer.add(group, forKey: nil)
-    }
-}
-
-extension DetailViewController {
-    func animation() {
-//        textLabel.layer.transform = CATransform3DRotate(textLabel.layer.transform, .pi/4, 1, 0, 0)
-//
-//        var animations = [CABasicAnimation]()
-//
-//        let animation1 = CABasicAnimation(keyPath: #keyPath(CALayer.position))
-//        animation1.fromValue = CGPoint(x: view.bounds.width/2, y: view.bounds.height)
-//        animation1.toValue = CGPoint(x: view.bounds.width/2, y: view.bounds.height/2)
-//        animation1.duration = 15.0
-//        animation1.autoreverses = false
-//
-//        animations.append(animation1)
-//
-//        let animation2 = CABasicAnimation(keyPath: #keyPath(CALayer.opacity))
-//        animation2.fromValue = 1.0
-//        animation2.toValue = 0.0
-//        animation2.beginTime = 10.0
-//        animation2.duration = 5.0
-//        animation2.autoreverses = false
-//
-//        animations.append(animation2)
-//
-//        let group = CAAnimationGroup()
-//
-//        group.duration = 15.0
-//        group.animations = animations
-//        textLabel.layer.add(group, forKey: nil)
     }
 }

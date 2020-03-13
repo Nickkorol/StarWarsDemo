@@ -8,9 +8,6 @@
 
 import Foundation
 
-import Foundation
-
-// MARK: - Person
 struct Person: Codable {
     let name, height, mass, hairColor: String
     let skinColor, eyeColor, birthYear: String
