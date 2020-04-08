@@ -34,7 +34,7 @@ final class DetailViewModelImpl: DetailViewModel {
                 print(error.localizedDescription)
             }
         } else {
-            URLSessionAPIManager.shared.getDetailPersonInfo(filmsURLs: films, speciesURLs: species, planetURL: planet, vehiclesURLs: vehicles, starshipsURLs: starships) {[weak self] (films, species, planet, vehicles, starships) in
+            URLSessionAPIManagerImpl.shared.getDetailPersonInfo(filmsURLs: films, speciesURLs: species, planetURL: planet, vehiclesURLs: vehicles, starshipsURLs: starships) {[weak self] (films, species, planet, vehicles, starships) in
                 self?.prepareDetailText(films: films, species: species, planet: planet, vehicles: vehicles, starships: starships)
             }
         }
