@@ -10,7 +10,7 @@
 		62FD70AF02635CACB2429E65 /* Pods_StarWarsDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FD6A693703905F8E0AB29B0 /* Pods_StarWarsDemo.framework */; };
 		7D605EAF2418D875008D038C /* PersonsViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D605EAE2418D875008D038C /* PersonsViewInput.swift */; };
 		7D605EB8241A14FD008D038C /* StarJediRounded.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7D605EB7241A14FD008D038C /* StarJediRounded.ttf */; };
-		7D8A3F332410DBD40063C803 /* URLSessionAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8A3F322410DBD40063C803 /* URLSessionAPIManager.swift */; };
+		7D8A3F332410DBD40063C803 /* URLSessionAPIManagerImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8A3F322410DBD40063C803 /* URLSessionAPIManagerImpl.swift */; };
 		7D8A3F35241104DB0063C803 /* DetailViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8A3F34241104DA0063C803 /* DetailViewInput.swift */; };
 		7DA8A1C522E99E6900F42895 /* PersonsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA8A1C422E99E6900F42895 /* PersonsViewModel.swift */; };
 		7DA8A1C722E99E9A00F42895 /* PersonsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA8A1C622E99E9A00F42895 /* PersonsCoordinator.swift */; };
@@ -29,6 +29,7 @@
 		7DA8A1F322EB355500F42895 /* DetailAssemblyImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA8A1F222EB355500F42895 /* DetailAssemblyImpl.swift */; };
 		7DA8A1F522EB36F700F42895 /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA8A1F422EB36F700F42895 /* DetailViewModel.swift */; };
 		7DA8A1F722EB370400F42895 /* DetailViewModelImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA8A1F622EB370400F42895 /* DetailViewModelImpl.swift */; };
+		7DD0F106243F1B12001529B1 /* URLSessionAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD0F105243F1B12001529B1 /* URLSessionAPIManager.swift */; };
 		7DF0A13E22E6054000CE18C2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DF0A13D22E6054000CE18C2 /* AppDelegate.swift */; };
 		7DF0A14322E6054000CE18C2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7DF0A14122E6054000CE18C2 /* Main.storyboard */; };
 		7DF0A14822E6054200CE18C2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7DF0A14722E6054200CE18C2 /* Assets.xcassets */; };
@@ -51,7 +52,7 @@
 		2A982F9F3276C429E3D355D2 /* Pods-StarWarsDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StarWarsDemo.debug.xcconfig"; path = "Target Support Files/Pods-StarWarsDemo/Pods-StarWarsDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		7D605EAE2418D875008D038C /* PersonsViewInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonsViewInput.swift; sourceTree = "<group>"; };
 		7D605EB7241A14FD008D038C /* StarJediRounded.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = StarJediRounded.ttf; sourceTree = "<group>"; };
-		7D8A3F322410DBD40063C803 /* URLSessionAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionAPIManager.swift; sourceTree = "<group>"; };
+		7D8A3F322410DBD40063C803 /* URLSessionAPIManagerImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionAPIManagerImpl.swift; sourceTree = "<group>"; };
 		7D8A3F34241104DA0063C803 /* DetailViewInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DetailViewInput.swift; path = StarWarsDemo/Modules/Detail/ViewModel/DetailViewInput.swift; sourceTree = SOURCE_ROOT; };
 		7DA8A1C422E99E6900F42895 /* PersonsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonsViewModel.swift; sourceTree = "<group>"; };
 		7DA8A1C622E99E9A00F42895 /* PersonsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonsCoordinator.swift; sourceTree = "<group>"; };
@@ -70,6 +71,7 @@
 		7DA8A1F222EB355500F42895 /* DetailAssemblyImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailAssemblyImpl.swift; sourceTree = "<group>"; };
 		7DA8A1F422EB36F700F42895 /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
 		7DA8A1F622EB370400F42895 /* DetailViewModelImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModelImpl.swift; sourceTree = "<group>"; };
+		7DD0F105243F1B12001529B1 /* URLSessionAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionAPIManager.swift; sourceTree = "<group>"; };
 		7DF0A13A22E6054000CE18C2 /* StarWarsDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StarWarsDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7DF0A13D22E6054000CE18C2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7DF0A14222E6054000CE18C2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -284,7 +286,8 @@
 			isa = PBXGroup;
 			children = (
 				7DF0A16F22E74B0300CE18C2 /* APIManager.swift */,
-				7D8A3F322410DBD40063C803 /* URLSessionAPIManager.swift */,
+				7D8A3F322410DBD40063C803 /* URLSessionAPIManagerImpl.swift */,
+				7DD0F105243F1B12001529B1 /* URLSessionAPIManager.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -437,7 +440,8 @@
 				7D8A3F35241104DB0063C803 /* DetailViewInput.swift in Sources */,
 				7DA8A1CF22E9B70300F42895 /* PersonAssemblyImpl.swift in Sources */,
 				7DF0A16B22E7450100CE18C2 /* Specie.swift in Sources */,
-				7D8A3F332410DBD40063C803 /* URLSessionAPIManager.swift in Sources */,
+				7DD0F106243F1B12001529B1 /* URLSessionAPIManager.swift in Sources */,
+				7D8A3F332410DBD40063C803 /* URLSessionAPIManagerImpl.swift in Sources */,
 				7DA8A1F122EB350600F42895 /* DetailCoordinatorImpl.swift in Sources */,
 				7DA8A1ED22EB34D100F42895 /* DetailAssembly.swift in Sources */,
 				7DF0A16322E741FC00CE18C2 /* Planet.swift in Sources */,

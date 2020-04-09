@@ -8,13 +8,16 @@
 
 import Foundation
 import UIKit
+import Swinject
 
 final class DetailAssemblyImpl: DetailAssembly {
     
     private let root: UIViewController!
+    let containter: Container
     
-    init(root: UIViewController) {
+    init(root: UIViewController, container: Container) {
         self.root = root
+        self.containter = container
     }
     
     func assembly(person: Person) -> DetailCoordinator {
@@ -26,6 +29,7 @@ final class DetailAssemblyImpl: DetailAssembly {
         }
         let viewModel = DetailViewModelImpl()
         controller.viewModel = viewModel
+        viewModel.manager = containter.resolve(URLSessionAPIManager.self)
         
         let coordinator = DetailCoordinatorImpl(root: root, mainViewController: controller)
         

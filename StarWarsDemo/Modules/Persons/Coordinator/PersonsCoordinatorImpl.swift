@@ -8,15 +8,18 @@
 
 import Foundation
 import UIKit
+import Swinject
 
 class PersonsCoordinatorImpl {
     
     weak var root: UIViewController!
     weak var mainViewController: UIViewController!
+    let container: Container
     
-    init(root: UIViewController, mainViewController: UIViewController) {
+    init(root: UIViewController, mainViewController: UIViewController, container: Container) {
         self.root = root
         self.mainViewController = mainViewController
+        self.container = container
     }
     
 }
@@ -29,7 +32,7 @@ extension PersonsCoordinatorImpl: PersonsCoordinator {
     }
     
     func showDetail(person: Person) {
-        let assembly = DetailAssemblyImpl(root: mainViewController)
+        let assembly = DetailAssemblyImpl(root: mainViewController, container: container)
         let coordinator = assembly.assembly(person: person)
         guard let viewController = coordinator.main else { fatalError() }
         mainViewController.navigationController?.pushViewController(viewController, animated: true)

@@ -14,6 +14,7 @@ final class DetailViewModelImpl: DetailViewModel {
     
     var coordinator: DetailCoordinator!
     weak var view: DetailViewInput?
+    var manager: URLSessionAPIManager?
     
     func viewDidLoad() {
         loadPersonData()
@@ -34,7 +35,7 @@ final class DetailViewModelImpl: DetailViewModel {
                 print(error.localizedDescription)
             }
         } else {
-            URLSessionAPIManager.shared.getDetailPersonInfo(filmsURLs: films, speciesURLs: species, planetURL: planet, vehiclesURLs: vehicles, starshipsURLs: starships) {[weak self] (films, species, planet, vehicles, starships) in
+            manager?.getDetailPersonInfo(filmsURLs: films, speciesURLs: species, planetURL: planet, vehiclesURLs: vehicles, starshipsURLs: starships) {[weak self] (films, species, planet, vehicles, starships) in
                 self?.prepareDetailText(films: films, species: species, planet: planet, vehicles: vehicles, starships: starships)
             }
         }

@@ -15,6 +15,7 @@ final class PersonsViewModelImpl: PersonsViewModel {
     private var isLoading = false
     
     weak var view: PersonsViewInput?
+    var manager: URLSessionAPIManager?
     
     func viewDidLoad() {
         requestPersons(needsRefreshing: false, isCalledOnScroll: false)
@@ -32,7 +33,7 @@ final class PersonsViewModelImpl: PersonsViewModel {
             numberOfPage = 0
         }
         numberOfPage += 1
-        URLSessionAPIManager.shared.getPersonsList(numberOfPage: numberOfPage) {[weak self] (persons, next) in
+        manager?.getPersonsList(numberOfPage: numberOfPage) {[weak self] (persons, next) in
             self?.view?.reloadData(persons: persons,
                                          next: next,
                                          needsRefreshing: needsRefreshing,
